@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+
+  mysql:
+    container_name: container-mysql
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: anIIAJAjas91j8h8ahHH8S8a
+      MYSQL_DATABASE: currency_exchange_rates
+      MYSQL_USER: currency
+      MYSQL_PASSWORD: bkOc5MpSUy6FPdMYNVzn
+    ports:
+      - 3306:3306
+
+  nestjs:
+    container_name: container-nestjs
+    build: ./currency-converter-api
+    command: bash -c 'while !</dev/tcp/mysql/3306; do sleep 1; done; npm start'
+    restart: always
+    depends_on: 
+      - mysql
+    links:
+      - mysql
+    environment:
+      MYSQL_DATABASE: currency_exchange_rates
+      MYSQL_USER: currency
+      MYSQL_PASSWORD: bkOc5MpSUy6FPdMYNVzn
+      MYSQL_URL: 'mysql'
+      MYSQL_PORT: 3306
+    ports:
+      - 3000:3000
