@@ -26,6 +26,9 @@ http://localhost:3000/docs
 ```
 
 Para leer la documentación en `AWS`, visitar el siguiente [enlace](http://ec2-3-141-244-3.us-east-2.compute.amazonaws.com:3000/docs).
+```
+http://ec2-3-141-244-3.us-east-2.compute.amazonaws.com:3000/docs
+```
 
 ### AWS
 
