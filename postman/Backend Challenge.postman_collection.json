@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "a21852e0-4994-4cef-9be2-9596d90efc03",
+		"name": "Backend Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4536821",
+		"_collection_link": "https://restless-escape-587557.postman.co/workspace/Team-Workspace~7f55a7fa-b49d-4159-8dc7-1431d6db191b/collection/4536821-a21852e0-4994-4cef-9be2-9596d90efc03?action=share&source=collection_link&creator=4536821"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "rates",
+					"item": [
+						{
+							"name": "POST /rates",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rate\": 3.98,\n    \"from_currency\": \"USD\",\n    \"to_currency\": \"PEN\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/rates",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /rates",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/rates",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /rates/:from/:to",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/rates/USD/PEN",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rates",
+										"USD",
+										"PEN"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATCH /rates",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rate\": 3.82,\n    \"from_currency\": \"USD\",\n    \"to_currency\": \"PEN\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/rates",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE /rates",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"from_currency\": \"USD\",\n    \"to_currency\": \"PEN\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/rates",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rates"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Rates Endpoints"
+				},
+				{
+					"name": "exchange",
+					"item": [
+						{
+							"name": "POST /exchange",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 321.98,\n    \"from_currency\": \"USD\",\n    \"to_currency\": \"PEN\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/exchange",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"exchange"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Exchange Endpoints"
+				}
+			],
+			"description": "API v1"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://ec2-3-141-244-3.us-east-2.compute.amazonaws.com:3000",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJKb25hdGhhbiBBcmFuY2liaWEiLCJpYXQiOjE3MDI1MDk3MTh9.VBLgSJJDYd6LV20CKxSfKgnmwW9MzDHuv4tIhhCM3ME"
+		}
+	]
+}
